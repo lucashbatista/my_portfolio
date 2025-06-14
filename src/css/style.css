@@ -4,3 +4,6 @@
     grid-auto-rows: minmax(250px, auto);
     grid-gap: 0.9rem;
   }
+h1 {
+    color:red;
+}
