@@ -336,6 +336,14 @@ body {
 
 /* tiles config for index.html*/
 
+.tiles-container {
+  display: flex;
+}
+
 .tile {
-  
+
+}
+
+.tile:hover {
+
 }
