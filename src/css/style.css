@@ -338,6 +338,7 @@ body {
 
 .tiles-container {
   display: flex;
+  gap: 20px;
 }
 
 .tile {
