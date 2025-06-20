@@ -24,3 +24,8 @@ body {
 .tile:hover {
      transform:scale(1.05);
 }
+
+.topnav {
+   background-color: whitesmoke;
+   overflow:hidden; 
+}

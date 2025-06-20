@@ -66,9 +66,7 @@ a {
 
 /* Main styling */
 body {
-  background: var(--bg-primary);
   color: var(--text-color);
-  font-family: "Raleway", sans-serif;
   line-height: 1.5;
   background-color: #ffd35c;
 }
