@@ -28,6 +28,7 @@ body {
 .topnav {
    background-color: whitesmoke;
    overflow:hidden; 
+   text-align: right;
 }
 
 /* Style the links inside the navigation bar */
