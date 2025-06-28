@@ -6,11 +6,17 @@ body {
 
 /* tiles config for index.html*/
 
-.tiles-container {
+.tiles-container-1 {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
+
+.tiles-container-2 {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+ }
 
 .tile {
    flex: 1 0 300px;
