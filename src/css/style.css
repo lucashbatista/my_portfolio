@@ -75,3 +75,8 @@ h3 {
 #project-title {
    text-align: center;
 }
+
+#hosted-github {
+   text-align: center;
+   font-weight: bold;
+}
