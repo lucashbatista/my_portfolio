@@ -1,0 +1,71 @@
+---
+title: "data_cleaning"
+author: "Lucas"
+date: "2025-07-10"
+output: html_document
+---
+
+```{r load packages}
+library(plyr)
+library(dtplyr)
+library(tidyr)
+library(lsr)
+library(ggplot2)
+library(stats)
+#Load packages
+library(tidyverse) # for general data wrangling and plotting
+library(forecast)
+library(lubridate) # for working with dates
+```
+
+```{r}
+print(df)
+#export image of DF
+```
+
+Get month forecast for Toys, Nationwide, product id P0002
+
+```{r Print Classes}
+str(df)
+
+```
+
+```{r Filter toys, nationwide, and product.id P0002}
+df_toy_P0002 <- df %>% filter(Category == "Toys" & Product.ID == "P0002") %>% 
+  select(Date, Demand.Forecast)
+```
+
+```{r extract month and create a new column}
+df_toy_P0002$month<-format(as.Date(df_toy_P0002$Date, format="%Y%d%m"), "%m")
+```
+
+```{r aggregate by month}
+df_ts<- aggregate(Demand.Forecast ~ format(Date, "%Y%m"), data = df_toy_P0002, FUN = mean
+          )
+print(df_ts)
+```
+
+```{r Plot Mean for Demand.Forecast}
+plot(df_ts, main = "Graph without forecasting", col.main = "DarkGreen")
+```
+
+```{r create time-series}
+time_series<-ts(df_ts$Demand.Forecast, start = c(2022, 1),
+                      end = c(2023,12), frequency = 12)
+```
+
+
+```{r plot time-series, acf}
+plot(time_series)
+acf(time_series)
+```
+
+
+```{r ARIMA model}
+arima <- select(df_ts, Demand.Forecast)
+fit <- auto.arima(arima)
+forecastedValues <- forecast(fit, 1)
+print(forecastedValues)
+plot(forecastedValues, main = "Graph with forecasting", col.main = "darkgreen")
+
+```
