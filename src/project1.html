@@ -41,6 +41,20 @@
             new_df$month <- format(as.Date(new_df$Date, format = "%Y%d%m"), "%m")
             new_df$year <- format(as.Date(new_df$Date, format = "%Y%d%m"), "%Y")
         </code>
+        <h4># EXTRACT MONTH AND YEAR TOGETHER</h4>
+        <code>
+            new_df$month_year <- format(as.Date(new_df$Date, format = "%Y%d%m"), "%m%Y")
+        </code>
+        <h4># AGGREGATE BY MONTH/YEAR</h4>
+        <code>
+            <p>Aggregate Year and Month, and take out the Mean from date</p>
+
+            ts_prep <- 
+            aggregate(new_df$Demand.Forecast, by = list(month= format(new_df$Date, "%Y-%m")), FUN = mean) #rename column "x" with values Demand.Forecast
+
+        </code>
+
+
 
     </body>
 </html>
