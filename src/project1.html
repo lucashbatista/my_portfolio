@@ -22,13 +22,25 @@
             library(forecast) <br>
             library(lubridate) # for working with dates
         </code>
-
-
-
         <h3>Read files.</h3>
         <code>
-
             df <- read_csv("retail_store_inventory.csv")
         </code>
+        
+        <h3># FILTER CATEGORY=TOYS | PRODUCT.ID = P0002. SELECT Date, Demand.Forecast</h3>
+
+        <code>
+            new_df <- 
+                df %>% filter(Category == "Toys" & Product.ID == "P0002") %>% 
+                select(Date, Demand.Forecast)
+        </code>
+
+        <h3># EXTRACT MONTH AND YEAR TO CREATE A NEW COLUMN</h3>
+        <h4>#make sure that lubridate is installed</h4>
+        <code>
+            new_df$month <- format(as.Date(new_df$Date, format = "%Y%d%m"), "%m")
+            new_df$year <- format(as.Date(new_df$Date, format = "%Y%d%m"), "%Y")
+        </code>
+
     </body>
 </html>
