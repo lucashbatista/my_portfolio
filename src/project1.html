@@ -54,6 +54,34 @@
 
         </code>
 
+        <h3># TIME SERIES AND FORECASTING. ARIMA</h3>
+        <h4># Plot Demand.Forecast</h4>
+        <code>
+            plot(ts_prep, main = "Graph without forecasting", col.main = "Darkgreen")
+        </code>
+
+        <h4># Create Time-Series</h4>
+        <code>
+            time_series <- ts(ts_prep$Demand.Forecast, 
+                  start = c(2022, 1), 
+                  end = c(2023, 12), 
+                  frequency = 12 )
+        </code>
+
+        <h4># Plot Time-Series</h4>
+        <code>
+            plot(time_series)
+            acf(time_series)
+        </code>
+
+        <h3># Arima Model</h3>
+        <code>
+            arima <- select(ts_prep, Demand.Forecast)
+            fit <- auto.arima(arima)
+            forecast_values <- forecast(fit, 1)
+            print(forecast_values)
+            plot(forecast_values, main = "Graph with forecast", col.main = "darkgreen")
+        </code>
 
 
     </body>
