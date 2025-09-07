@@ -187,3 +187,8 @@ h3 {
    font-family:arial;
 
 }
+
+html{
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
