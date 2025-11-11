@@ -20,3 +20,11 @@ I utilize the following tools and technologies to execute my analysis:
 * **Workflow & Tools:** Git/GitHub, Jupyter Notebooks.
 
 ---
+
+## 📬 Let's Connect
+
+| Platform | Link |
+| :--- | :--- |
+| **LinkedIn** | [https://www.linkedin.com/in/lucashbatista/] |
+| **Personal Website** | [ https://lucashbatista.github.io/my_portfolio/] |
+
