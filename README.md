@@ -25,6 +25,6 @@ I utilize the following tools and technologies to execute my analysis:
 
 | Platform | Link |
 | :--- | :--- |
-| **LinkedIn** | [https://www.linkedin.com/in/lucashbatista/] |
-| **Personal Website** | [ https://lucashbatista.github.io/my_portfolio/] |
+| **LinkedIn** | https://www.linkedin.com/in/lucashbatista/ |
+| **Personal Website** | https://lucashbatista.github.io/my_portfolio/ |
 
